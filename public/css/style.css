@@ -1,0 +1,218 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración del cuerpo de la página */
+html, body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    height: 100%; /* Asegura que el html y body ocupen toda la altura */
+}
+
+/* Estructura básica de la página */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+}
+
+/* Estilos para el header */
+.container-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(247, 162, 162);
+}
+
+.menu-logo {
+    width: 40%;
+}
+
+.menu-logo p {
+    font-family: 'Arial', Courier, monospace;
+    font-size: 28px;
+}
+
+.menu-link {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.menu-link ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu-link li {
+    margin: 0 10px;
+    height: 100%;
+}
+
+.menu-link a {
+    font-size: 20px;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+}
+
+.menu-link a:hover {
+    background-color: #fff;
+    color: rgb(247, 162, 162);
+    border-radius: 5px;
+}
+
+/* Contenido principal */
+.container-principal {
+    flex: 1; /* Hace que el contenedor principal ocupe el espacio restante */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para el título principal */
+.principal-title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.principal-title h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+/* Estilos para la información principal */
+.principal-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex: 1;
+}
+
+.principal-information {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.principal-information p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.principal-information ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.principal-information ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para la sección del carrusel */
+.principal-carrusel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.principal-carrusel img {
+    object-fit: cover;
+    width: 40%;
+    height: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.principal-carrusel a {
+    font-size: 20px;
+    color: #fff;
+    background-color: rgb(247, 162, 162);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.principal-carrusel a:hover {
+    background-color: #333;
+}
+
+/* Estilos para el footer */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+/* Media Queries para Responsividad */
+
+/* Ajustes para pantallas de tabletas (hasta 768px) */
+@media (max-width: 768px) {
+    .menu-logo {
+        width: 50%;
+    }
+
+    .menu-link {
+        width: 50%;
+    }
+
+    .principal-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .principal-information, .principal-carrusel {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .principal-title h1 {
+        font-size: 28px;
+    }
+
+    .principal-information p {
+        font-size: 16px;
+    }
+}
+
+/* Ajustes para pantallas de móviles (hasta 480px) */
+@media (max-width: 480px) {
+    .menu-logo p {
+        font-size: 24px;
+    }
+
+    .menu-link a {
+        font-size: 16px;
+    }
+
+    .principal-title h1 {
+        font-size: 24px;
+    }
+
+    .principal-information p {
+        font-size: 14px;
+    }
+}

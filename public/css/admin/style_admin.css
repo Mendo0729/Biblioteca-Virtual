@@ -1,0 +1,191 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración del cuerpo de la página */
+html, body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos para el header */
+header {
+    width: 100%;
+    background-color: rgb(247, 162, 162);
+}
+
+.container-menu {
+    display: flex;
+    flex-direction: row; /* Mantiene la dirección de la columna */
+    align-items: flex-end; /* Alinea el contenido al inicio */
+    padding: 20px;
+}
+
+.menu-logo {
+    width: 30%;
+    margin-bottom: 10px;
+}
+
+.menu-logo p {
+    font-family: 'Arial', Courier, monospace;
+    font-size: 18px;
+}
+
+
+.menu-link {
+    width: 70%;
+}
+
+.menu-link ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.menu-link li {
+    margin: 5px 0;
+}
+
+.menu-link a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.menu-link a:hover {
+    background-color: #fff;
+    color: #f7a2a2;
+    border-radius: 5px;
+}
+
+/* Estilos para el main */
+main {
+    flex: 1; /* Ocupa el espacio restante entre el header y el footer */
+    padding: 20px;
+}
+
+/* Estilos para el Dashboard */
+.dashboard-overview {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Para que los items se acomoden en varias filas si es necesario */
+}
+
+.stat-item {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 150px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.stat-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.stat-item h3 {
+    font-size: 28px;
+    color: rgb(247, 162, 162);
+}
+
+.dashboard-management {
+    margin-top: 20px;
+}
+
+.management-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Para que los botones se acomoden en varias filas si es necesario */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(247, 162, 162);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e74c3c;
+}
+
+/* Estilo del footer */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto; /* Esto asegura que el footer siempre esté en la parte inferior */
+    clear: both; /* Asegura que no interfiera con el contenido superior */
+    position: relative; /* Cambié position: absolute por relative para evitar que se superponga */
+}
+
+/* Responsive para pantallas más pequeñas */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Cambia a columna para pantallas pequeñas */
+    }
+
+    .container-menu {
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .menu-link ul {
+        flex-direction: row; /* Cambia las opciones a fila para pantallas pequeñas */
+        justify-content: space-around;
+    }
+
+    .menu-link li {
+        margin: 0 10px;
+    }
+
+    .menu-logo p {
+        text-align: center; /* Centra el logo */
+        font-size: 24px; /* Aumenta el tamaño del logo en pantallas pequeñas */
+    }
+}
+
+/* Responsive para pantallas móviles (menos de 480px) */
+@media (max-width: 480px) {
+    .menu-link a {
+        font-size: 16px; /* Reduce el tamaño de las fuentes en móviles */
+        padding: 8px;
+    }
+
+    .menu-logo p {
+        font-size: 20px; /* Ajusta el tamaño del logo en pantallas más pequeñas */
+    }
+
+    footer {
+        font-size: 14px; /* Ajusta el tamaño de fuente del footer en móviles */
+    }
+}
